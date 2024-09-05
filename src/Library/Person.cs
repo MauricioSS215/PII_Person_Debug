@@ -42,7 +42,7 @@ namespace Ucu.Poo.Persons
         {
             get
             {
-                return $"{this.Name}{this.FamilyName}";
+                return $"{this.Name} {this.FamilyName}"; //Se arreglo, se esperaban 15 caracteres pero devolvia 14, se agrego un espacio entre ambos parametros.
             }
         }
 
@@ -66,7 +66,7 @@ namespace Ucu.Poo.Persons
                     age--;
                 }
 
-                return age;
+                return -age; //Se identifico un error en esta linea, devolvia la edad en negativo, se arregla multiplicando por -1
             }
         }
 
